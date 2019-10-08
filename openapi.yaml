@@ -8,11 +8,11 @@ servers:
   - url: http://localhost:5000/v1
 
 paths:
-  /variables:
+  /test:
     get:
       summary: simple test.
       description: test nested objects as query parameter.
-      operationId: app.get_variables
+      operationId: app.get_test
       responses:
         200:
           description: variables context
@@ -45,8 +45,7 @@ paths:
           in: query
           description: filter parameter.
           required: true
-          explode: true
-          style: deepObject
+          explode: false
           schema: 
             type: object
             required:
